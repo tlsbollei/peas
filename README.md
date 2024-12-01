@@ -7,16 +7,19 @@
   <br>
 </h1>
 
-<h4 align="center">Linux Privilege Escalation checker <a href="http://electron.atom.io" target="_blank"></a></h4>
+<h4 align="center">Linux Privilege Escalation <a href="http://electron.atom.io" target="_blank"></a></h4>
 
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
+[![Discord](https://img.shields.io/badge/Discord-7289DA?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/MqqPYJ2s)
 
 
 <p align="center">
   <a href="#key-features">Key Features</a> 
   <a href="#how-to-use">How To Use</a> 
+
+
 
 ![screenshot](https://raw.githubusercontent.com/tlsbollei/peas/refs/heads/main/assets/peas.gif)
 
