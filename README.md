@@ -119,8 +119,3 @@ $ bash peas.sh
 
 
 
-> GitHub [tlsbollei](https://github.com/tlsbollei) &nbsp;&middot;&nbsp;
-> Instagram [0fa102](https://www.instagram.com/0fa102/)
-> Discord [0fa](https://discord.com/channels/@me)
-> Telegram [boleii655](https://t.me/boleii655)
-
