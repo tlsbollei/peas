@@ -1,13 +1,20 @@
 
 <h1 align="center">
   <br>
-  <img src=https://raw.githubusercontent.com/tlsbollei/peas/refs/heads/main/assets/kaneki.jpg alt="Linux Peas" width="200"></a>
+  <img src=https://raw.githubusercontent.com/tlsbollei/peas/refs/heads/main/assets/c772b8b3-5f97-4b0f-ad07-1f6f6fd9ef5e.png alt="Linux Peas" width="200"></a>
   <br>
-  ctPEASf
+  ctPEASf - lightweight privesc tool for CTFs
   <br>
 </h1>
 
-<h4 align="center">Linux Privilege Escalation <a href="http://electron.atom.io" target="_blank"></a></h4>
+<p align="left">
+  ctfPEASf has been developed as a personal project after countless jeopardy CTF competitions and root2boot exercises. Up until a certain point in time I have been constantly using LinPeas, whose obnoxious verbosity, weight on the target system, slow execution and annoying dependencies have provided for a miserable CTF experience. That is precisely why I have created ctPEASf -> a lightweight, small privilege escalation framework. I have fed this bash script continous new checks after seeing them in their respective CTFs. I plan on enhancing ctPEASf as my experience with boot2root and privilege escalation CTFs grow.
+  <a href="http://electron.atom.io" target="_blank"></a>
+</p>
+
+
+
+
 
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat-square)](https://www.firsttimersonly.com/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
@@ -36,7 +43,7 @@
 * Scans for world-writable files and directories ```(find / -writable).```
 * Outputs the list of these files and suggests investigation for privilege escalation risks.
 * Displays the current user details  ( ```id ``` and  ```groups ``` commands).
-* Shows the groups the user belongs to, aiding in the identification of potential misconfigurations.
+* Shows the groups the user belongs to.
 * Checks for sensitive environment variables related to passwords, tokens, keys, and credentials using  ```env | grep -iE '(password|secret|key|token|credential)' ```.
 * Lists non-standard mounted file systems  ```(mount | grep -v 'proc\|sysfs\|tmpfs') ```.
 * Flags potentially insecure mount options (e.g., noexec, nosuid, nodev) that could be exploited for privilege escalation.
@@ -48,62 +55,38 @@
 * Searches for files with the sticky bit set ( ```find / -type f -perm -1000 ```).
 * Checks if critical system files like  ```/etc/hosts ``` and  ```/etc/hostname ``` are writable by the current user.
 
+ ## As of the 17th of June 2025, ctPEASf has gained the following functionalities ->
+
+* Generally checks for containerization context (docker,lxc,kubepods) by reading from ```/proc/1/cgroup```
+* Checks for passwordless sudo auth using ```sudo -n true``` and capturing shell result output
+* Checks for writable PATH variables
+* Hunts down users assigned a real shell after strict filtering
+* Looks for an exposed docker socket at ```/var/run/docker.sock```, checks its readability
+
+
 
 ## How To Use
 
 
 
 ```bash
-# Give permissions
+$ wget https://raw.githubusercontent.com/tlsbollei/peas/main/peas.sh -O ctpeasf.sh 
 $ chmod +x peas.sh
-
-# Run the script
 $ ./peas.sh
-
-or
-
-# Run the script
-$ bash peas.sh
 ```
 
 ## Dependencies
-
-
 * On Debian/Ubuntu :
-  ```bash
-  sudo apt update
-  sudo apt install exploitdb
-  sudo apt install net-tools
-  sudo apt install iproute2
-  sudo apt install findutils
-  sudo apt install grep
-  sudo apt install coreutils
+```bash
+sudo apt update && sudo apt install -y exploitdb net-tools iproute2 findutils grep coreutils
+```
 
+## Where ctPEASf has been used, so far, with efficient results
 
-  ```
-* On RedHat/CentOs :
-  ```bash
-  sudo yum install exploitdb
-  sudo yum install net-tools
-  sudo yum install iproute
-  sudo yum install findutils
-  sudo yum install grep
-  sudo yum install coreutils
+* CyberGame 2025, which serves at the national qualifier for Team Slovakia, has had a CTF task with an exposed docker socket. Using prototyped logic from ctPEASf, I have successfuly identified the exposed docker socket and created an escape container.
+* VulnHub "Docker:1"
+* TryHackMe “Wonderland” CTF -> malicious code injection via PATH
 
-  ```
-* On Arch Linux :
-  ```bash
-  sudo pacman -S exploitdb
-  sudo pacman -S net-tools
-  sudo pacman -S iproute2
-  sudo pacman -S findutils
-  sudo pacman -S grep
-  sudo pacman -S coreutils
-
-
-
-  ```
-  
 
 
 
