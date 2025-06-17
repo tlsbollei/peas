@@ -3,7 +3,7 @@
   <br>
   <img src=https://raw.githubusercontent.com/tlsbollei/peas/refs/heads/main/assets/kaneki.jpg alt="Linux Peas" width="200"></a>
   <br>
-  Linux Peas
+  ctPEASf
   <br>
 </h1>
 
