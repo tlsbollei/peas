@@ -1,57 +1,75 @@
 #!/bin/bash
-
-
 RED=$'\e[0;31m'
 GREEN=$'\e[0;32m'
 YELLOW=$'\e[0;33m'
 BLUE=$'\e[0;34m'
 NC=$'\e[0m'  
 
+
 echo -e "${GREEN}"
-echo -e "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡴⠞⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo -e "⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣴⠋⠁⣀⣠⣤⠴⠖⠲⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo -e "⠀⠀⠀⠀⠀⠀⡤⣤⣶⡿⠛⢻⡏⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo -e "⠀⠀⠀⢀⣔⣻⣶⣟⠛⢷⣾⡛⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo -e "⠀⠀⠘⣁⣩⣿⣏⠙⣲⣾⢅⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo -e "⠠⠞⠉⠙⣿⣯⡉⠻⣿⠗⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo -e "⢀⣤⠤⠴⣿⣿⡟⠛⢻⣶⠲⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo -e "⠏⠀⠀⠀⢹⣿⣧⠶⠿⣿⣤⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo -e "⢀⣠⡴⠶⠿⣿⣧⣀⡴⠛⢛⣷⣴⡖⠒⠂⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo -e "⠟⠁⠀⣀⣤⣿⣿⣿⣥⢴⡾⠋⠉⢻⣷⢿⣯⡀⠀⣁⡴⠒⠆⣀⡤⠤⠀⢀⡴⠂⢀⡤⠂⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo -e "⠀⣰⠛⠉⠀⠀⢉⣿⣿⣿⣄⣀⣴⠋⢀⣤⡿⠿⠿⣟⣷⡶⠾⢿⡷⣤⣶⣿⣦⣴⣿⣷⣤⣼⣏⡁⣠⡴⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀"
-echo -e "⠀⠁⠀⠀⢠⡾⠋⠉⠙⠷⣿⣿⣿⣶⣾⡟⣀⠀⣠⡿⠋⢀⡤⠊⢾⡟⠁⣴⠟⠁⢀⣾⠏⢈⣽⠟⠛⢷⣦⣤⣤⣤⠦⣄⠀⠀⠀⠀"
-echo -e "⠀⠀⠀⠀⠈⠀⠀⠀⣠⠶⠛⠙⠛⢿⣿⣷⣇⣿⣿⣆⣴⣾⣷⣼⣿⣀⣤⣿⢠⡀⣸⢃⣤⡟⠁⠀⢀⡾⠛⠁⠀⣙⣧⣨⡤⠶⣤⡀⠀⠀"
-echo -e "⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⠀⠀⠀⣀⡼⠿⠿⣿⣿⣿⣿⣿⣿⣷⣿⣽⣻⣿⣿⣿⣿⣾⣿⣧⣤⣤⣿⠀⠀⣠⠾⠛⠁⢹⣿⣄⠀⠁⠀⠀"
-echo -e "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠋⠀⠀⠀⣠⠟⠁⠁⣿⠁⠀⣹⠛⠛⢹⠟⠋⠻⡿⠻⣿⣿⡿⢿⣷⣾⣷⣰⠞⠛⠚⠻⣿⡷⢦⣄⠀"
-echo -e "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠏⠀⠀⠀⢣⠀⠀⠹⡄⠀⢸⡄⠀⢰⠇⢠⠟⢁⣤⠾⢿⣿⣿⣧⣤⡴⠶⠾⣿⣷⠀⠉⠲"
-echo -e "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠀⠈⠂⠘⠀⠎⢠⠞⢻⣿⣿⣏⣡⣴⡶⣶⣾⣿⣷⣄⠀"
-echo -e "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣡⠔⠛⣿⣿⡿⡅⠀⠀⠀⠙⣿⡃⠈⠳"
-echo -e "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣽⣿⠻⢤⣀⠀⠀⢀⣾⣿⠀⠀"
-echo -e "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡴⠶⠚⠓⠾⣿⣿⠆⠀⠈⢣⣸⣿⣿⠛⣧⠀"
-echo -e "${NC}"
-
-echo "Good night, Haise"
-
 
 
 read -p "Press enter to continue with the script..."
 
 
-echo "${YELLOW}[*] checking kernel version..."
+echo "${YELLOW}[*] checking for kernel exploits..."
 KERNEL=$(uname -r)
-echo "[+] Kernel version: $KERNEL"
-echo "[+] Searching for kernel exploits ..."
-searchsploit --color linux kernel | grep -i "$KERNEL" || echo "${RED}[-] No  kernel exploits found for $KERNEL."
+if command -v searchsploit &> /dev/null; then
+    searchsploit --color linux kernel | grep -i "$KERNEL" || echo "${RED}[-] no  kernel exploits found for $KERNEL."
+else
+    echo "${RED}[-] searchsploit not found. skipping kernel exploit check."
+fi
 
+echo "${YELLOW}[*] checking containerization context..."
+grep -qaE 'docker|lxc|kubepods' /proc/1/cgroup && echo "${GREEN}[+] detected container environment in /proc/1/cgroup"
+
+
+## 
+echo "${YELLOW}[*] checking sudo permissions using sudo -n true..."
+if sudo -n true 2>/dev/null; then
+    echo "${GREEN}[+] passwordless sudo is enabled, test-authed with sudo result 0."
+    sudo -l
+else
+    sudo -l 2>/dev/null || echo "${RED}[-] cannot list sudo permissions (no access)."
+fi
+
+echo "${YELLOW}[*] checking for writable PATH variables"
+IFS=':' read -ra PATH_DIRS <<< "$PATH" # create a split array from paths, -r to not interpret backslashes
+for dir in "${PATH_DIRS[@]}"; do
+    if [ -w "$dir" ]; then
+        echo "${GREEN}[+] writable directory in PATH: $dir"
+    fi
+done
+
+# checks accounts with uid >= 1000 (mostly user accounts above) and filtering out login, includes only users assigned a real shell
+echo "${YELLOW}[*] checking /etc/passwd for shell-enabled users..."
+
+awk -F: '($3 >= 1000 && $7 != "/usr/sbin/nologin" && $7 != "/bin/false") { print $1 ":" $7 }' /etc/passwd
+
+
+
+echo "${YELLOW}[*] checking for exposed docker socket in /var/run... (note that if this machine has an exposed docker socket, it may not lie in /var/run"
+if [ -S /var/run/docker.sock ]; then
+    if [ -r /var/run/docker.sock ]; then
+        echo "${GREEN}[+] docker socket exists and is readable."
+        echo "${GREEN}[!] consider creating a host breakout container"
+    else
+        echo "${RED}[-] docker socket exists but is not readable by current user."
+    fi
+else
+    echo "${RED}[-] no docker socket found."
+fi
+
+grep -qa docker /proc/1/cgroup && echo "${GREEN}[+] you're in a Docker container."
 
 echo "${YELLOW}[*] searching for SUID binaries..."
 SUID_FILES=$(find / -perm -4000 -type f 2>/dev/null)
 if [ -z "$SUID_FILES" ]; then
-    echo "${RED}[-] No SUID files found."
+    echo "${RED}[-] no SUID files found."
 else
-    echo "${GREEN}[+] Found SUID binaries:"
+    echo "${GREEN}[+] found SUID binaries:"
     echo "$SUID_FILES" | tee suid_files.txt
-    echo "${GREEN}[!] Investigate further."
+    echo "${GREEN}[!] investigate further."
 fi
 
 
